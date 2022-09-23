@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
+
+h2,p{
+    margin:0;
+    padding: 0px;
+    font-size: initial;
+    font-weight: initial;
+}
+
+body, figure, ul {
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+
+li {
+ list-style: none;   
+}
+
+button, input {
+    padding: 0;
+    /* font-family: inherit; */
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    border: none;
+
+}
+
+* {
+    box-sizing: border-box;
+    /* line-height: 1; */
+}
+
+
+body {
+    background-color: #EAE8FE;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.tit-img {
+    height: 180px;
+    width: 386px;
+}
+
+.main-box {
+    margin-top: 67px;
+    margin-bottom: 100px;
+}
+
+.main-box {
+display: flex;
+justify-content: center;
+gap: 28px;
+}
+
+
+.section-box {
+    background-color: #ffffff;
+    width: 360px;
+    /* height: 545px; */
+    /* border: 2px solid red; */
+    padding: 31px 27px 28px 27px;
+}
+
+
+.container-drink {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+
+}
+
+.item-drink {
+    padding: 9px 11px 9px 13px;
+    width: 94px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px  black;
+}
+
+.item-drink:hover {
+    outline: 3px solid blue;
+}
+
+.item-drink  figcaption{
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+    /* 글씨 크기를 더 줄여야하나?? */
+
+}
+
+.original-can {
+    /* position: relative; */
+    width: 36px;
+    height: 65px;
+    /* transform: translateX(-25%); */
+    /* 여기서 왜 -25%를 해야 가운데에 위치할까? */
+    /* text-align: cent인데... */
+    /* 묹제 해결 figure에 마진이 있었다 */
+}
+
+.btn-drink {
+    background-color: #6327FE;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 5px 15px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    border: none;
+    margin-top: 7px;
+}
+
+.container-money {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    margin-top: 20px;
+    gap: 11px;
+
+}
+
+.balance-money {
+    padding: 6px 10px 7px;
+    width: 100%;
+    position: relative;
+    text-align: right;
+    background-color: #EAE8FE;
+    border-radius: 5px;
+}
+
+.balance-money::before {
+    content: '잔액 :';
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    left: 10px;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.balance-money::after {
+    content: '원';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-balance {
+    color: black;
+    padding: 6px 9px 8px 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+}
+
+.inp-money {
+    color: #BDBDBD;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    padding: 6px 6px 8px 6px;
+
+}
+
+.btn-deposit {
+    color: black;
+    padding: 6px 35px 7px;
+    background-color: #fff;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.btn-acheive {
+    background-color: #6327FE;
+    color: white;
+    padding: 43px 35px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.list-want {
+    background-color: #EAE8FE;
+    border-radius: 5px;
+}
+
+.list-want>ul {
+    padding: 12px 12px 0px 12px;
+    font-size: 9px;
+    text-align: left;
+}
+
+.wrap-list {
+    overflow-y: scroll;
+    height: 106px;
+}
+
+.wrap-list::-webkit-scrollbar {
+    width: 10px;
+}
+.wrap-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 50px;
+}
+
+
+
+
+
+.list-item {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    padding: 6px 8px 7px 10px;
+}
+.list-item:nth-child(2n) {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.list-img {
+    width: 18px;
+    height: 33px;
+    vertical-align: -12px;
+    margin-right: 10px;
+}
+
+.list-count {
+    position: absolute;
+    font-size: 14px;
+    top: 8px;
+    right: 8px;
+    border: 1px solid #BDBDBD;
+    display: inline;
+    border-radius: 5px;
+    padding: 4px 11px;
+    margin-left: auto;
+}
+
+.section-left {
+    padding: 0;
+    background-color: #EAE8FE;
+
+}
+
+.box-moeney {
+    background-color: #ffffff;
+    padding: 9px 27px;
+}
+
+.money-count {
+    background-color: #EAE8FE;
+    border-radius: 5px;
+    position: relative;
+    text-align: right;
+    vertical-align: 12px;
+    padding: 6px 10px;
+    font-weight: 700;
+
+
+}
+
+.money-count::before {
+    content: '소지금 :';
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    left: 10px;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+
+.money-count::after {
+    content: '원';
+    font-size: 14px;
+    font-weight: 700;
+    vertical-align: 1px;
+    margin-left: 1px;
+}
+
+.gain-drink {
+    background-color: #ffffff;
+    margin-top: 20px;
+    padding: 0px 27px 27px;
+    overflow: hidden;
+}
+
+.gain-drink .wrap-list {
+    height: 364px;
+}
+
+.tit-gain-drink {
+    margin-top: 25px;
+    margin-bottom: 13px;
+}
+
+.txt-total {
+    position: relative;
+    margin-top: 6px;
+    text-align: right;
+    font-size: 12px;
+    text-align: right;
+}
+
+/* .txt-total::before {
+    content: '총금액 :';
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    right: 10px;
+    top: 50%;
+    transform: translate(0%,-50%);
+} */
+
+.txt-total::after {
+    content: '원';
+    font-size: 12px;
+    font-weight: 500;
+    vertical-align: 0px;
+    margin-left: 1px;
+}
