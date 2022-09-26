@@ -59,9 +59,10 @@ body {
 }
 
 .main-box {
-display: flex;
-justify-content: center;
-gap: 28px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
 }
 
 
@@ -88,6 +89,24 @@ gap: 28px;
     box-shadow: 0px 0px 3px  black;
 }
 
+.item-drink.sold-out {
+    overflow: hidden;
+    position: relative;
+}
+.item-drink.sold-out:hover {
+    outline: none;
+}
+
+.item-drink.sold-out::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(./images/Sold-out.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .item-drink:hover {
     outline: 3px solid blue;
 }
@@ -101,13 +120,8 @@ gap: 28px;
 }
 
 .original-can {
-    /* position: relative; */
     width: 36px;
     height: 65px;
-    /* transform: translateX(-25%); */
-    /* 여기서 왜 -25%를 해야 가운데에 위치할까? */
-    /* text-align: cent인데... */
-    /* 묹제 해결 figure에 마진이 있었다 */
 }
 
 .btn-drink {
@@ -126,7 +140,7 @@ gap: 28px;
 .container-money {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
+    grid-template-rows: 33px 33px 106px;
     margin-top: 20px;
     gap: 11px;
 
@@ -212,12 +226,9 @@ gap: 28px;
 .wrap-list::-webkit-scrollbar-thumb {
     background-color: #ffffff;
     background-clip: padding-box;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     border-radius: 50px;
 }
-
-
-
 
 
 .list-item {
@@ -244,10 +255,8 @@ gap: 28px;
     top: 8px;
     right: 8px;
     border: 1px solid #BDBDBD;
-    display: inline;
     border-radius: 5px;
     padding: 4px 11px;
-    margin-left: auto;
 }
 
 .section-left {
